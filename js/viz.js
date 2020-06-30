@@ -1,1 +1,5 @@
-document.body.innerHTML ="Done!";
+
+function change()
+{
+    document.body.innerHTML ="Done!";
+}
