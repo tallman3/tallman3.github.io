@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<script src="http://d3js.org/d3.v4.min.js"></script>
+<style> svg rect {fill: rgb(70, 180, 85)} 
+h1 {padding-left: 220px; color:rgb(180, 79, 12)}</style>
+<html>
+    <body>
+        <h1>Canadian Savings, Investment, and Inflation 1999 - 2019</h1>
+        <svg>                       
+        </svg>
+    <script>
+        const width = 880;
+        const height = 500;
+        const margin = 50;
+        d3.csv("./investsave.csv", function(data) {
+            console.log(data);
+        })
+        // var data=[35.97,15.75,14.65,7.92,6.94,5.53,4.06,3.63,3.35,2.2,0.1];
+        // var x = d3.scaleBand().domain(["Financial","Industrials","Energy","Materials","Communication","Consumer Def.","Technology","Utilities","Real Estate","Consumer Cyc.","Healthcare"]).range([0,width]);
+        // var y = d3.scaleLinear().domain([0,50]).range([height,0]);
+        // d3.select("svg")
+        //     .attr("width", width + 2 * margin)
+        //     .attr("height", height + 2 * margin)
+        //     .append("g")
+        //     .attr("transform","translate(" + margin + "," + margin + ")")
+        //     .selectAll("rect")
+        //     .data(data)
+        //     .enter().append("rect")
+        //     .attr("width", 79)
+        //     .attr("height", function(d) { return height - y(d) })
+        //     .attr("x", function(d, i) { return 80*i; })
+        //     .attr("y", function(d) { return height - (height - y(d)); });
+        // d3.select("svg").append("g")
+        //     .attr("transform","translate(" + margin + "," + margin + ")")
+        //     .call(d3.axisLeft(y));
+        // d3.select("svg").append("g")
+        //     .attr("transform","translate(" + margin + "," + (height + margin) + ")")
+        //     .call(d3.axisBottom(x));
+    </script>
+    </body>
+</html>
