@@ -69,7 +69,7 @@ div#header p {
 }
 
 div#navigation {
-    background: #d0f19a;
+    background: #a4cddd; 
     white-space: nowrap;
 }
 
@@ -78,7 +78,7 @@ div#navigation li {
 }
 
 div#extra {
-    background: #a4cddd; 
+    background: #d0f19a;
 }
 
 div#footer {
