@@ -40,8 +40,8 @@ figure1.ready = function(stats) {
   var tooltip = d3.select("#tooltip");
   var popup1 = d3
                 .select('#popup1')
-                .style("left", (width - 30) + "px")
-                .style("top", (height * 2 - 300) + "px")
+                .style("left", (width - 10) + "px")
+                .style("top", (height * 2 - 250) + "px")
                 .html(figure1.popUpMessage1);
   var popup2 = d3
                 .select('#popup2')

@@ -111,7 +111,7 @@ figure2.ready = function(stats, startAmount, startYear, blend) {
 
 
   // Dimensions.
-  const margin = { top: 40, right: 60, bottom: 40, left: 60 };
+  const margin = { top: 10, right: 60, bottom: 40, left: 60 };
   const width = 700 - margin.right - margin.left;
   const height = 400 - margin.top - margin.bottom;
 
@@ -128,15 +128,13 @@ figure2.ready = function(stats, startAmount, startYear, blend) {
 
   figure2.popup1 = d3
     .select("#popup2-1")  
-    .style("left", (width - 230) + "px")
+    .style("left", (width - 180) + "px")
     .style("top", (height * 2 - 350) + "px")
     .html(figure2.popUpMessage1);
 
     d3.select("#figure2div")                       
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom);
-
-
    
   // Line generator.
   const lineGen = d3
