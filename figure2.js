@@ -1,6 +1,6 @@
 var figure2 = {};
 
-figure2.popUpMessage1 = ("You don't have to choose either investment<br> in the market or savings.  Use the options <br>in the blue box to see the performance of a blend<br> of investment and savings over time.")
+figure2.popUpMessage1 = ("You don't have to choose either investment<br> in the market or savings.  Use the options <br>in the green box to see the performance of a blend<br> of investment and savings over time.")
 figure2.load = function() {
   // Load data.
   d3.csv('investsave.csv', figure2.type).then(res => {
@@ -53,17 +53,17 @@ figure2.prepareData = function(data, startAmount, startYear, blendPerc) {
           series: [
               {
                 name: 'Invest',
-                color: 'dodgerblue',
+                color: 'green',
                 values: invest
               },
               {
                 name: 'Savings',
-                color: 'darkorange',
+                color: 'red',
                 values: savings
               },
               {
                   name: 'Blend',
-                  color: 'green',
+                  color: 'purple',
                   values: blend
               }
         
@@ -77,12 +77,12 @@ figure2.prepareData = function(data, startAmount, startYear, blendPerc) {
       series: [
           {
             name: 'Invest',
-            color: 'dodgerblue',
+            color: 'green',
             values: invest
           },
           {
             name: 'Savings',
-            color: 'darkorange',
+            color: 'red',
             values: savings
           }
         ],

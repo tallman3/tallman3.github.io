@@ -17,7 +17,7 @@ figure3.ready = function(stats) {
     // Dimensions.
     const margin = { top: 10, right: 60, bottom: 40, left: 60 };
     const width = 1000 - margin.right - margin.left;
-    const height = 300 - margin.top - margin.bottom;  
+    const height = 200 - margin.top - margin.bottom;  
   
     const colwidth = (width / stats.length) - 2;
   
