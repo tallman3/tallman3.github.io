@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+
+<head>
+    <title>tallman3 CS498 Data Visualization Project</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="figure5.js"></script>
+    <link href="invest.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>Canadian Savings Alternatives - Large Cap Dividend Funds</h1>
+        </div>
+        <div id="wrapper">
+            <div id="content">
+                <h2>Comparing the Funds</h2>
+                <p>
+                    No single factor makes one fund better than the other.  In order to properly
+                    evaluate the funds there are many factors that should be considered.  
+                    Several key factors are available to select on the right to assist in choosing the best fund.
+                </p>
+
+                <h3><em>Figure 5</em> <span id="figuretitle">Fund Yield Comparison</span></h3>
+                <div class="active" id="figure5div">
+                    <svg id="figure5">
+                        
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div id="navigation">
+            <p><strong>Steps to Financial Security</strong></p>
+            <ul>
+                <li><a href="index.html">1 .Challenging Times</a></li>
+                <li><a href="invest.html">2. Invest in the Market</a></li>
+                <li><a href="economy.html">3. Large Cap Dividend Funds</a></li>
+                <li><a href="funds.html">4. Fund Choices</a></li>
+
+        </div>
+        <div id="extra">
+            <div>
+                <h3>Key factors</h3>
+                <p>Below are the key factors to differentiate between funds</p>
+                <ul>
+                    <li>Yield - how much a return the fund provides per year</li>
+                    <li>MER (Management Expense Ratio) - the annual fee charged by the fund</li>
+                    <li>AUM (Assets Under Management) - the amount of assets the fund controls</li>
+                    <li>STARS - The Morningstar rating for the fund</li>
+                    <li>ALPHA - The value that managers add by active management of the fund.  Higher is better.</li>
+                    <li>Sharpe Ratio - The return compared to the amount of risk.  Higher is better.</li>
+                </ul>
+                <p><strong>Choose a factor</strong>
+                <label for="axis">Key:</label>
+                <select name="axis" id="AXIS">
+                    <option value="YIELD">Yield</option>
+                    <option value="MER">MER</option>
+                    <option value="AUM">AUM</option>
+                    <option value="STARS">Stars</option>
+                    <option value="ALPHA">Alpha</option>
+                    <option value="SHARPE">Sharpe Ratio</option>
+                </select>
+                <button onclick="figure5.load();">Update</button>
+                </p>
+            </div>
+            <div style="padding: 25px 0 0 90px; background-color: white;">
+
+                <a class="button" href="economy.html">&lt;&lt; Large Cap Dividend Funds</a>
+            </div>
+
+        </div>
+        <div id="footer">
+            <p>CS 498: Data Visualization Narrative Visualization<br />
+                Michael Tallman, NetID: tallman3</p>
+        </div>
+    </div>
+    <script>figure5.load()</script>
+</body>
+
+</html>

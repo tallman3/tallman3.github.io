@@ -1,43 +1,128 @@
-<!DOCTYPE html>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<style> svg rect {fill: rgb(70, 180, 85)} 
-h1 {padding-left: 220px; color:rgb(180, 79, 12)}</style>
-<html>
-    <body>
-        <h1>Canadian Savings, Investment, and Inflation 1999 - 2019</h1>
-        <svg>                       
-        </svg>
-    <script>
-        const width = 880;
-        const height = 500;
-        const margin = 50;
-        let data;
-        d3.csv("./investsave.csv", function(d) {
-            data = d;
-        })
-        console.log("test");
-        console.log(data);
-        // var data=[35.97,15.75,14.65,7.92,6.94,5.53,4.06,3.63,3.35,2.2,0.1];
-        // var x = d3.scaleBand().domain(["Financial","Industrials","Energy","Materials","Communication","Consumer Def.","Technology","Utilities","Real Estate","Consumer Cyc.","Healthcare"]).range([0,width]);
-        // var y = d3.scaleLinear().domain([0,50]).range([height,0]);
-        // d3.select("svg")
-        //     .attr("width", width + 2 * margin)
-        //     .attr("height", height + 2 * margin)
-        //     .append("g")
-        //     .attr("transform","translate(" + margin + "," + margin + ")")
-        //     .selectAll("rect")
-        //     .data(data)
-        //     .enter().append("rect")
-        //     .attr("width", 79)
-        //     .attr("height", function(d) { return height - y(d) })
-        //     .attr("x", function(d, i) { return 80*i; })
-        //     .attr("y", function(d) { return height - (height - y(d)); });
-        // d3.select("svg").append("g")
-        //     .attr("transform","translate(" + margin + "," + margin + ")")
-        //     .call(d3.axisLeft(y));
-        // d3.select("svg").append("g")
-        //     .attr("transform","translate(" + margin + "," + (height + margin) + ")")
-        //     .call(d3.axisBottom(x));
-    </script>
-    </body>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+
+<head>
+    <title>tallman3 CS498 Data Visualization Project</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="figure2.js"></script>
+    <link href="invest.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>Canadian Savings Alternatives - Large Cap Dividend Funds</h1>
+        </div>
+        <div id="wrapper">
+            <div id="content">
+                <h2>Invest in the Market</h2>
+                <h3>Stocks outperform savings over the long-term</h3>
+                <p>
+                    Although the performance of the TSE looks very volatile with years losing 
+                    over ten percent, in the long-term investing in the market is a better choice 
+                    to protect your retirement and your future purchasing power.
+                </p>
+
+
+            <div id="figure2div">
+                    <h3><em>Figure 2</em> - <span id="Figure2Title"> Savings vs Investment Return on $100,000 1999 -
+                            2019</span></h3>
+                    <div class="line-chart-container"></div>
+                    <div id="popup2-1"></div>
+                    <div>
+                        <svg width="800" height="30" transform="translate(50,0)">
+
+                            <rect x="100" y="10" height="1" width="20" class="cpb"></rect>
+                            <text x="125" y="15" fill="black">Savings Return (Canadian Premium Bonds)</text>
+                            <rect x="480" y="10" height="1" width="20" class="tse"></rect>
+                            <text x="505" y="15" fill="black">Investment Return</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        <div id="navigation">
+            <p><strong>Steps to Financial Security</strong></p>
+            <ul>
+                <li><a href="index.html">1 .Challenging Times</a></li>
+                <li><a href="invest.html">2. Invest in the Market</a></li>
+                <li><a href="economy.html">3. Large Cap Dividend Funds</a></li>
+                <li><a href="funds.html">4. Fund Choices</a></li>
+
+        </div>
+        <div id="extra">
+            <div id="figure2-inputs">
+            <p><strong>It is not one or the other</strong></p>
+            <p>Investing in the market does not have to be an all or 
+                nothing decision.  Choose a different starting year, start amount
+                and a percentage to invest in the stock market to see a blended return
+            </p>
+            <p>
+                <label for="year">Choose a start year:</label>
+                <select name="year" id="YEAR">
+                    <option value="1999">1999</option>
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                    <option value="2005">2005</option>
+                    <option value="2006">2006</option>
+                    <option value="2007">2007</option>
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                </select>
+            </p>
+            <p>
+                <label for="amount">Choose a start amount:</label>
+                <select name="amount" id="START">
+                    <option value="10000">10000</option>
+                    <option value="25000">25000</option>
+                    <option value="50000">50000</option>
+                    <option value="100000">100000</option>
+                    <option value="250000">250000</option>
+                    <option value="500000">500000</option>
+                    <option value="1000000">1000000</option>
+                    <option value="2000000">2000000</option>
+                </select>
+
+            </p>
+            <p>
+                <label for="blend">Choose a percentage to invest in the stock market:</label>
+                <select name="blend" id="BLEND">
+                    <option value="0">0</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                    <option value="50">50</option>
+                    <option value="60">60</option>
+                    <option value="70">70</option>
+                    <option value="80">80</option>
+                    <option value="90">90</option>
+                    <option value="95">95</option>
+                </select>
+            </p>
+            <p>
+                <button onclick="figure2.buttonClick()">Blend Investments and Savings</button>
+            </p>
+        </div>
+            <div style="padding: 25px 0 0 90px; background-color: white;">
+
+                <a class="button" href="economy.html">Large Cap Dividend Funds >></a>
+            </div>
+            <div style="padding: 25px 0 0 90px; background-color: white;">
+
+                <a class="button" href="index.html">&lt;&lt; Challenging Times</a>
+            </div>
+        </div>
+        <div id="footer">
+            <p>CS 498: Data Visualization Narrative Visualization<br />
+                Michael Tallman, NetID: tallman3</p>
+        </div>
+    </div>
+    <script>figure2.load()</script>
+</body>
+
 </html>

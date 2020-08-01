@@ -1,0 +1,224 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #1f1e1e;
+    font: Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+p {
+    padding: 0 10px;
+    line-height: 1.8;
+}
+
+div#extra p {
+    padding-left: 10px;
+    line-height: 1.1;
+
+}
+
+.button {
+    font: bold 16px Arial;
+    min-width: 600px;
+    text-decoration: none;
+    background-color: #ec0505;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+  }
+
+
+ul li {
+    padding-right: 10px;
+    line-height: 1.6;
+}
+
+h3 {
+    padding: 5px 20px;
+    margin: 0;
+}
+
+div#header {
+    position: relative;
+}
+
+div#header h1 {
+    height: 60px;
+    line-height: 40px;
+    margin: 0;
+    padding-left: 30px;
+    padding-top: 20px;
+    background: #e0e0e0;
+    color: #292929;
+}
+
+div#header p {
+    height: 50px;
+    line-height: 20px;
+    margin: 0;
+    padding-left: 10px;
+    background: #e0e0e0;
+    color: #201e1e;
+}
+
+div#navigation {
+    background: #d0f19a;
+}
+
+div#navigation li {
+    list-style: none;
+}
+
+div#extra {
+    background: #a4cddd; 
+}
+
+div#footer {
+    background: #42444e;
+    color: #fff;
+}
+
+div#footer p {
+    padding: 20px 10px;
+}
+
+div#wrapper {
+    float: left;
+    width: 100%;
+}
+
+div#content {
+    margin: 0 25% 0 15%;
+    padding-left: 10px;
+}
+
+div#navigation {
+    float: left;
+    width: 15%;
+    margin-left: -100%;
+}
+
+div#extra {
+    float: left;
+    width: 25%;
+    margin-left: -25%;
+}
+
+div#footer {
+    clear: left;
+    width: 100%;
+}
+
+
+rect.cpi {
+    fill: rgb(0, 38, 255); 
+
+}
+
+rect.cpb {
+    fill: rgb(255, 0, 0);
+}
+
+rect.tse {
+    fill: rgb(30, 180, 85);
+}
+
+h1 {
+    padding-left: 60px;
+    color: rgb(180, 79, 12)
+}
+
+button {
+    height: 40px;
+    width: 300px;
+    margin:20px;
+}
+
+.financialservices {
+    fill: red;
+}
+
+.energy {
+    fill: orange;
+}
+.industrials {
+    fill: yellow;
+}
+
+.commservices {
+    fill: green;
+}
+
+.utilities {
+    fill: blue;
+}
+
+.consdefensive {
+    fill: indigo;
+}
+
+.technology {
+    fill: violet;
+}
+
+.basicmaterials {
+    fill: brown;
+}
+
+.realestate {
+    fill: black;
+}
+
+.healthcare {
+    fill: gray;
+}
+
+.conscyclical {
+    fill: lightgray;
+}
+
+#tooltip {
+    opacity: 0;
+    position: absolute;
+    text-align:center;
+    padding: 2px;    
+    font-size: 0.8em;
+    background: white;
+    border: black solid 1px; 
+}
+
+#popup1 {
+    position: absolute;
+    font-size: 1em;
+    background: yellow;
+    border: black solid 1px; 
+    padding: 5px;
+    opacity: 0;
+
+}
+
+#popup2 {
+    position: absolute;
+    font-size: 1em;
+    background: yellow;
+    border: black solid 1px; 
+    padding: 5px;
+    opacity: 0;
+
+}
+
+#popup2-1 {
+    position: absolute;
+    font-size: 1em;
+    background: yellow;
+    border: black solid 1px; 
+    padding: 5px;
+    opacity: 0;
+
+}

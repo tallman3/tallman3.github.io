@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+
+<head>
+    <title>tallman3 CS498 Data Visualization Project</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="figure3.js"></script>    
+    <script src="figure4.js"></script>
+    <link href="invest.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>Canadian Savings Alternatives - Large Cap Dividend Funds</h1>
+        </div>
+        <div id="wrapper">
+            <div id="tooltip"></div>
+            <div id="content">
+                <h2>Large Cap Dividend Funds</h2>
+                <h3>Matching the Canadian economy</h3>
+                <p>
+                    In order to find an appropriate Large Cap Dividend fund, it's key to understand how
+                    different funds choose to mirror the Canadian economy.  A uniquely Canadian challenge is 
+                    that the economy is dominated by the Financial Services sector (over 30%).                    
+                </p>
+                <div id="figure3div">
+                    <h3><em>Figure 3</em> - Percentage of Canadian Economy by Sector</h3>
+                    <svg id="figure3">
+                    </svg>
+                </div>
+                <h3>Fund Options</h3>
+                <p>In order to lower risk, the dividend funds try to match the economy and only
+                    slightly overweight or underweight different sectors depending on their analysts'
+                    beliefs on the best and worst growth sectors.
+                </p>
+                <div id="figure4div">
+                    <h3><em>Figure 4</em> - Dividend Funds Compared to the Economy</h3>
+                    <svg id="figure4">
+                    </svg>
+                </div>
+            
+            </div>
+        </div>
+        <div id="navigation">
+            <p><strong>Steps to Financial Security</strong></p>
+            <ul>
+                <li><a href="index.html">1 .Challenging Times</a></li>
+                <li><a href="invest.html">2. Invest in the Market</a></li>
+                <li><a href="economy.html">3. Large Cap Dividend Funds</a></li>
+                <li><a href="funds.html">4. Fund Choices</a></li>
+
+        </div>
+        <div id="extra">
+            <h3>Why Dividend Funds?</h3>
+            <p>Corporate dividends are tax-advantaged compared to interest income in Canada.</p>
+            <p>Although these funds vary on how closely they match the economy, they all invest
+                in the largest dividend earning companies in Canada.
+            </p>
+            <div style="padding: 25px 0 0 90px; background-color: white;">
+
+                <a class="button" href="funds.html">Fund Choices >></a>
+            </div>
+            <div style="padding: 25px 0 0 90px; background-color: white;">
+
+                <a class="button" href="invest.html">&lt;&lt; Invest in the Market</a>
+            </div>
+             
+        </div>
+        <div id="footer">
+            <p>CS 498: Data Visualization Narrative Visualization<br />
+                Michael Tallman, NetID: tallman3</p>
+        </div>
+    </div>
+    <script>figure3.load();figure4.load()</script>
+</body>
+
+</html>

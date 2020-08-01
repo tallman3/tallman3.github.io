@@ -1,37 +1,73 @@
-<!DOCTYPE html>
-<script src="http://d3js.org/d3.v4.min.js"></script>
-<style> svg rect {fill: rgb(70, 180, 85)} 
-h1 {padding-left: 220px; color:rgb(180, 79, 12)}</style>
-<html>
-    <body>
-        <h1>RBF 1150 Investment by Industry</h1>
-        <svg>                       
-        </svg>
-    <script>
-        const width = 880;
-        const height = 500;
-        const margin = 50;
-        var data=[35.97,15.75,14.65,7.92,6.94,5.53,4.06,3.63,3.35,2.2,0.1];
-        var x = d3.scaleBand().domain(["Financial","Industrials","Energy","Materials","Communication","Consumer Def.","Technology","Utilities","Real Estate","Consumer Cyc.","Healthcare"]).range([0,width]);
-        var y = d3.scaleLinear().domain([0,50]).range([height,0]);
-        d3.select("svg")
-            .attr("width", width + 2 * margin)
-            .attr("height", height + 2 * margin)
-            .append("g")
-            .attr("transform","translate(" + margin + "," + margin + ")")
-            .selectAll("rect")
-            .data(data)
-            .enter().append("rect")
-            .attr("width", 79)
-            .attr("height", function(d) { return height - y(d) })
-            .attr("x", function(d, i) { return 80*i; })
-            .attr("y", function(d) { return height - (height - y(d)); });
-        d3.select("svg").append("g")
-            .attr("transform","translate(" + margin + "," + margin + ")")
-            .call(d3.axisLeft(y));
-        d3.select("svg").append("g")
-            .attr("transform","translate(" + margin + "," + (height + margin) + ")")
-            .call(d3.axisBottom(x));
-    </script>
-    </body>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+
+<head>
+    <title>tallman3 CS498 Data Visualization Project</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="figure1.js"></script>
+    <link href="invest.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>Canadian Savings Alternatives - Large Cap Dividend Funds</h1>
+        </div>
+        <div id="wrapper">
+            <div id="content">
+                <h2>Challenging Times</h2>
+                <p>
+                    For several decades, many Canadians have used Canada Premium Bonds (CPBs) and Canada Savings Bonds
+                    (CSBs) to
+                    generate income during retirement with a low risk profile.
+                    Unfortunately in the current low-interest environment, it is no longer a viable retirement plan.
+                    Although
+                    the Canadian stock market, as represented by the TSE index, has been volatile
+                    and lost almost 35% in one year during the 2008 recession, older investors would be far better off
+                    today if
+                    they had invested in the stock market rather than government bonds.
+                </p>
+ 
+                <div  id="figure1div">
+                    <h3><em>Figure 1</em> - Canadian Savings, Investment, and Inflation 1999 - 2019</h3>
+                    <div id="tooltip"></div>
+                    <div id="popup1"></div>
+                    <div id="popup2"></div>
+                    <svg id="figure1"></svg>  
+               </div>
+            </div>
+        </div>
+        <div id="navigation">
+            <p><strong>Steps to Financial Security</strong></p>
+            <ul>
+                <li><a href="index.html">1 .Challenging Times</a></li>
+                <li><a href="invest.html">2. Invest in the Market</a></li>
+                <li><a href="economy.html">3. Large Cap Dividend Funds</a></li>
+                <li><a href="funds.html">4. Fund Choices</a></li>
+
+        </div>
+        <div id="extra">
+            <h3>Did You Know?</h3>
+            <p><strong>There is no broad consensus in Canada on the true measurement of a Savings or Investment rate.</strong></p>
+            <ul>
+                <li>In this analysis, the Canadian Premium Bonds (CPBs) savings rate are used to represent savings.  CPBs are widely available
+                    to most Canadians with a competitive interest rate. </li>
+                <li>The Toronto Stock Exchange index (TSE) will be used to represent a return on investment.  The TSE represents
+                    the majority of Canadian public companies and is a good representative for typical Canadian investors.
+                </li>
+                <li>Canada's inflation is measured the the Consumer Price Index (CPI)</li>
+
+            </ul>
+            <div style="padding: 25px 0 0 90px; background-color: white;">
+
+                <a class="button" href="invest.html">Invest in the Market >></a>
+            </div>
+        </div>
+        <div id="footer">
+            <p>CS 498: Data Visualization Narrative Visualization<br />
+                Michael Tallman, NetID: tallman3</p>
+        </div>
+    </div>
+    <script>figure1.load()</script>
+</body>
 </html>
