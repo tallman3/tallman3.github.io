@@ -21,11 +21,12 @@ div#extra p {
 }
 
 .button {
-    font: bold 16px Arial;
+    font: bold 1em Arial;
     min-width: 600px;
     text-decoration: none;
     background-color: #ec0505;
     color: white;
+    white-space: nowrap;
     padding: 10px 30px 10px 30px;
     border-top: 1px solid #CCCCCC;
     border-right: 1px solid #333333;
@@ -69,6 +70,7 @@ div#header p {
 
 div#navigation {
     background: #d0f19a;
+    white-space: nowrap;
 }
 
 div#navigation li {
