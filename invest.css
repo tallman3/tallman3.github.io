@@ -143,46 +143,46 @@ button {
 }
 
 .financialservices {
-    fill: red;
+    fill: #000040;
 }
 
 .energy {
-    fill: orange;
+    fill: DarkBlue;
 }
 .industrials {
-    fill: yellow;
+    fill: Blue;
 }
 
 .commservices {
-    fill: green;
+    fill: Green;
 }
 
 .utilities {
-    fill: blue;
+    fill: DarkCyan;
 }
 
 .consdefensive {
-    fill: indigo;
+    fill: darkturquoise;
 }
 
 .technology {
-    fill: violet;
+    fill: SpringGreen;
 }
 
 .basicmaterials {
-    fill: brown;
+    fill: Cyan;
 }
 
 .realestate {
-    fill: black;
+    fill: darkslategray;
 }
 
 .healthcare {
-    fill: gray;
+    fill: CadetBlue;
 }
 
 .conscyclical {
-    fill: lightgray;
+    fill: lightslategray;
 }
 
 #tooltip {
