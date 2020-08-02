@@ -53,7 +53,7 @@
                 </ul>
                 <p>
                 <label for="axis">Choose a factor:</label>
-                <select name="axis" id="AXIS">
+                <select name="axis" id="AXIS" onchange="figure5.load()">
                     <option value="YIELD">Yield</option>
                     <option value="MER">MER</option>
                     <option value="AUM">AUM</option>
@@ -61,8 +61,7 @@
                     <option value="ALPHA">Alpha</option>
                     <option value="SHARPE">Sharpe Ratio</option>
                 </select>
-                <button onclick="figure5.load();">Update Factor</button>
-                </p>
+                 </p>
             </div>
             <div style="padding: 25px 0 0 90px; background-color: white;">
 
