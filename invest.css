@@ -143,46 +143,46 @@ button {
 }
 
 .financialservices {
-    fill: #000040;
+    fill: #673AB7;
 }
 
 .energy {
-    fill: DarkBlue;
+    fill: #3F51B5;
 }
 .industrials {
-    fill: Blue;
+    fill: #2196F3;
 }
 
 .commservices {
-    fill: Green;
+    fill: #009688;
 }
 
 .utilities {
-    fill: DarkCyan;
+    fill: #00BCD4;
 }
 
 .consdefensive {
-    fill: darkturquoise;
+    fill: #03A9F4;
 }
 
 .technology {
-    fill: SpringGreen;
+    fill: #CDDC39;
 }
 
 .basicmaterials {
-    fill: Cyan;
+    fill: #8BC34A;
 }
 
 .realestate {
-    fill: darkslategray;
+    fill: #4CAF50;
 }
 
 .healthcare {
-    fill: CadetBlue;
+    fill: #FF9800;
 }
 
 .conscyclical {
-    fill: lightslategray;
+    fill: #FF5722;
 }
 
 #tooltip {
