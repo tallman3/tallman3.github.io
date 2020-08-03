@@ -3,7 +3,7 @@ var figure2 = {};
 figure2.popUpMessage1 = ("You don't have to choose either investment<br> in the market or savings.  Use the options <br>in the green box to see the performance of a blend<br> of investment and savings over time.")
 figure2.load = function() {
   // Load data.
-  d3.csv('investsave.csv', figure2.type).then(res => {
+  d3.csv('/data/investsave.csv', figure2.type).then(res => {
     figure2.ready(res, 100000, 1999, 0);
   });
 }
@@ -220,7 +220,7 @@ figure2.buttonClick = function() {
     let startAmount = document.getElementById('START').value;
     let blend = document.getElementById('BLEND').value;
  
-    d3.csv('investsave.csv', figure2.type).then(res => {
+    d3.csv('/data/investsave.csv', figure2.type).then(res => {
         figure2.ready(res, +startAmount, +year, +blend);
       });
       

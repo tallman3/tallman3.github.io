@@ -1,7 +1,7 @@
 var figure4 = {};
 figure4.load = function() {
 // Load data.
-    d3.csv('sectors.csv', figure4.type).then(res => {
+    d3.csv('/data/sectors.csv', figure4.type).then(res => {
         figure4.ready(res);
     });
 }

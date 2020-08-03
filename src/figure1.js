@@ -4,7 +4,7 @@ figure1.popUpMessage2 = "Savings rates have not exceeded inflation<br>since 2009
 
 figure1.load = function() {
 // Load data.
-    d3.csv('investsave.csv', figure1.type).then(res => {
+    d3.csv('/data/investsave.csv', figure1.type).then(res => {
         figure1.ready(res);
     });
 }
